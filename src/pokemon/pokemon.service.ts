@@ -47,7 +47,6 @@ export class PokemonService {
 
   async update(id: string, updatePokemonDto: UpdatePokemonDto) {
     try {
-      await this.findOne(id);
       await this.pokemonModel.findByIdAndUpdate(id, updatePokemonDto);
       return this.findOne(id);
     } catch (error) {
