@@ -64,4 +64,9 @@ export class PokemonService {
     await this.findOne(id);
     await this.pokemonModel.findByIdAndDelete(id);
   }
+
+  async hydrateWithSeed(pokemons: CreatePokemonDto[]) {
+    await this.pokemonModel.deleteMany({});
+    await this.pokemonModel.insertMany(pokemons);
+  }
 }
