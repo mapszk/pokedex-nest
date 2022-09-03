@@ -5,4 +5,5 @@
 1. Clone
 2. Exec `npm install`
 3. Install Nest CLI
-4. Start DB `docker-compose up -d`
+4. Hydrate DB `http://localhost:3000/api/v1/seed`
+5. Start DB `docker-compose up -d`
